@@ -161,20 +161,9 @@ int main(int argc, char** argv) {
 	JukX = 0.1 * (rand() % 9 + 1);
 	JukY = -0.1 * (rand() % 19 + 1);
 
-	SuXdir = 0.4;
-	SuYdir = -1.0;
+	SuXdir = JukX-SuX; //수구는 적구를 향해 진행
+	SuYdir = JukY-SuY;
 	JukXdir, JukYdir = 0.0; //처음 적구는 정지상태
-	
-	/*
-	//수구가 적구를 must 치는 경우 testdata
-	SuX = 0.0;
-	SuY = 1.0;
-	JukX, JukY = 0.0;
-	
-	SuXdir = 0.1;
-	SuYdir = -1.0;
-	JukXdir, JukYdir = 0.0;
-	*/
 	
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
